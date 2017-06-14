@@ -1,0 +1,22 @@
+<button type="button" class="btn btn-primary btn-block patrolaBtn">Dodaj novi komentar</button>
+
+<table class="table table-hover patrola">
+  <thead>
+    <tr>
+      <th>Korisnik</th>
+      <th>Komentar</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |komentar|}}  
+    <tr>
+      <td>{{komentar.korisnik.username}}</td>
+      <td>{{komentar.tekst}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+{{outlet}}

@@ -1,0 +1,27 @@
+<table class="table table-hover table-striped patrola">
+  <thead>
+    <tr>
+      <th>Ime</th>
+      <th>Username</th>
+      <th>Email</th>
+      <th># tačne pr.</th>
+      <th># netačne pr.</th>
+      <th>Ocjena</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |user|}}  
+    <tr>
+      <td>{{user.ime}}</td>
+      <td>{{user.username}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.brojTacnihPrijava}}</td>
+      <td>{{user.brojNetacnihPrijava}}</td>
+      <td>{{user.ocjena}}</td>
+	  <td><input class="btn btn-primary btn-sm" type="submit" value="Blokiraj korisnika" {{action 'blokirajkorisnika' user.id}}></td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+{{outlet}}

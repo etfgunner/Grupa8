@@ -1,0 +1,22 @@
+{{outlet}}
+
+<p class="bg-info">Dodaj novu patrolu</p>
+
+	
+	<table class="table table-hover patrola">
+  <thead>
+    <tr>
+      <th>Lokacija</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |lokacija|}}  
+    <tr>
+      <td>{{lokacija.naziv}}</td>
+      <td><input class="btn btn-primary btn-sm" type="submit" value="Dodaj patrolu" {{action 'dodajpatrolu' lokacija.id}}></td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+{{outlet}}
